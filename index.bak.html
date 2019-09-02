@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>系统入口</title>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    #os_title{
+        height: 50%;
+        width: 100%;
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        margin: 50px auto;
+
+    }
+
+    /* #os_enter{
+        width: 100%;
+        margin: 0 auto;
+    } */
+
+    #os_enter img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .enter_student{
+        float: left;
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+        margin-left: 100px;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .enter_techter, .enter_root, .enter_maintenance{
+        float: left;
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
+    #os_foot{
+        position: fixed;
+        width: 100%;
+        height: 20px;
+        text-align: center;
+        bottom: 20px;
+    }
+
+</style>
+</head>
+<body>
+    <div id="os_title">
+        实验室设备管理系统 V2.1
+    </div>
+
+    <div id="os_enter">
+        <div class="enter_student">
+            <a href="login.html">
+                <img src="images/enter_student.jpg" title="学生入口"/>
+            </a>
+        </div>
+        <div class="enter_techter">
+            <a href="login.html">
+                <img src="images/enter_techter.jpg" title="教师入口"/>
+            </a>
+        </div>
+        <div class="enter_root">
+            <a href="login.html">
+                <img src="images/enter_root.jpg" title="管理员入口"/>
+            </a>
+        </div>
+        <div class="enter_maintenance">
+            <a href="login.html">
+                <img src="images/enter_maintenance.jpg" title="维修入口"/>
+            </a>
+        </div>
+    </div>
+
+    <div id="os_foot">
+        @版权所有，请勿抄袭 2019-2020
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>后台管理</title>
+  <link rel="stylesheet" href="../layui/css/layui.css" />
+  <link rel="stylesheet" href="../css/back_style.css">
+</head>
+
+<body class="layui-layout-body">
+  <div class="layui-layout layui-layout-admin">
+
+    <div class="os-header">
+      <div class="layui-logo">实验室设备后台管理</div>
+      <!-- 头部区域（可配合layui已有的水平导航） -->
+
+      <!-- 搜索框 -->
+      <div class="container">
+        <form action="" class="parent">
+          <input type="text" class="search" placeholder="搜索">
+          <input type="button" name="" id="" class="btn">
+        </form>
+      </div>
+
+
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+          <a class="show-user-name" href=""><img src="../images/enter_student.jpg" class="layui-nav-img">
+            <?php echo $uname; ?>
+          </a>
+        </li>
+        <li class="layui-nav-item">
+          <a class="exit-os" href="javascript:;">退出系统</a>
+        </li>
+      </ul>
+
+    </div>
+
+
+    <!-- 左边菜单栏 -->
+    <div class="layui-side layui-bg-black">
+      <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+          <li class="layui-nav-item">
+            <i class="layui-icon">&nbsp;&nbsp;&#xe653;</i>
+            主菜单栏
+          </li>
+          <li class="layui-nav-item">
+            <a class="show-console" href="javascript:;">
+              <i class="layui-icon">&#xe663;&nbsp;</i>实验室管理
+            </a>
+            <dl class="layui-nav-child">
+              <dd>
+                <a class="laboratory-info" href="javascript:;">
+                  <i class="layui-icon">&#xe615;&nbsp;</i>实验室信息
+                </a>
+              </dd>
+              <dd>
+                <a class="equip-info" href="javascript:;">
+                  <i class="layui-icon">&#xe60a;&nbsp;设备信息
+                </a>
+              </dd>
+              <dd>
+                <a class="maintenance-apply" href="javascript:;">
+                  <i class="layui-icon">&#xe621;&nbsp;</i>维修申请
+                </a>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="layui-body right-body">
+
+      <!-- 控制台 -->
+      <div class="os-nav">
+        <ul class="os-nav-ul">
+          <li>控制台>></li>
+        </ul>
+      </div>
+
+
+
+      <hr>
+      <!-- 内容主体区域 --表格-->
+      <div class="main-body layui-side-scroll">
+        <div class="content-body">
+            <br>
+            <h1>欢迎使用！</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="notice">
+      公告栏！！！！
+      <hr>
+      <div class="notice-conten"></div>
+    </div>
+
+    <div class="layui-footer show-footer">
+        <!-- 底部固定区域 -->
+        实验室设备管理系统
+      </div>
+  </div>
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../layui/layui.js"></script>
+  <script type="text/javascript" src="../js/back_stage.js"></script>
+  <script type="text/javascript" src="../js/back_fun.js"></script>
+</body>
+
+</html>

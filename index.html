@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/index_style.css">
+</head>
+
+<body class="login-bg">
+    <div class="login-box">
+        <header>
+            <h1>登陆管理系统</h1>
+        </header>
+        <div class="login-main">
+            <form action="php/index.php" class="layui-form" method="post">
+                <div class="layui-form-item">
+                    <label class="login-icon">
+                        <i class="layui-icon">&#xe770;</i>
+                    </label>
+                    <input type="text" name="uname" lay-verify="userName" autocomplete="off" placeholder="请输入登录名"
+                        class="layui-input input-name">
+                </div>
+                <div class="layui-form-item">
+                    <label class="login-icon">
+                        <i class="layui-icon">&#xe673;</i>
+                    </label>
+                    <input type="password" name="upasswd" lay-verify="password" autocomplete="off" placeholder="请输入密码"
+                        class="layui-input input-passwd">
+                </div>
+                <div class="isLand">
+                    <label class="login-icon isLand_label">
+                    </label>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label layui-inline">选择身份：</label>
+                    <div onblur="check_user_passwd()" class="layui-input-inline select_identity">
+                        <select name="uposition" class="input-position">
+                            <option value="1" selected="">系统管理员</option>
+                            <option value="2">设备管理员</option>
+                            <option value="3">仓库管理员</option>
+                            <option value="4">维修员</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="pull-left login-remember">
+                        <label>记住帐号？</label>
+                        <input type="checkbox" name="rememberMe" value="true" lay-skin="switch" title="记住帐号">
+                        <div class="layui-unselect layui-form-switch"><i></i></div>
+                    </div>
+                    <br>
+                    <div class="pull-right">
+                        <input type="submit" class="layui-btn layui-btn-radius layui-btn-lg layui-btn-normal btn_submit"
+                            value="登陆" lay-submit="" lay-filter="login">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <p><a href="#">联系系统管理人员</a></p>
+        </footer>
+    </div>
+
+    <div id="os_foot">
+        @版权所有，请勿抄袭 2019-2020
+    </div>
+
+    <script type="text/html" id="code-temp">
+        <div class="login-code-box">
+            <input type="text" class="layui-input" id="code" />
+            <img id="valiCode" src="validatecode?v=636150612041789540" alt="验证码" />
+        </div>
+    </script>
+    <script src="layui/layui.all.js"></script>
+    <script>
+        layui.use(['layer', 'form'], function () {
+            var layer = layui.layer,
+                $ = layui.jquery,
+                form = layui.form;
+
+            form.verify({
+                userName: function (value) {
+                    if (value === '')
+                        return '请输入用户名';
+                },
+                password: function (value) {
+                    if (value === '')
+                        return '请输入密码';
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/back_stage.js"></script>
+    <script type="text/javascript" src="js/back_fun.js"></script>
+</body>
+
+</html>
